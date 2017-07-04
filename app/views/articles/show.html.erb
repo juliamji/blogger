@@ -7,6 +7,11 @@
     <%= link_to tag.name, tag_path(tag) %>
   <% end  %>
 </p>
+<p>
+  <% if @article.image.exists? %>
+      <%= image_tag @article.image.url %><br/>
+  <% end %>
+</p>
 <h3>Comments(<%= @article.comments.length %>)</h3>
 <%= render partial: 'articles/comment', collection: @article.comments.reverse %>
 <%= render partial: 'comments/form' %>
