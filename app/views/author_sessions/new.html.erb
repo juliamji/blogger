@@ -1,4 +1,4 @@
-<%= form_tag 'author_sessions_path', method: :post, do %>
+<%= form_tag 'author_sessions_path', method: :post %>
     <%= label_tag :email %>
     <%= text_field_tag :email %>
 
@@ -6,6 +6,6 @@
     <%= password_field_tag :password %>
 
     <%= submit_tag 'Login' %>
-<% end %>
+
 
 <%= link_to 'Back', articles_path %>
