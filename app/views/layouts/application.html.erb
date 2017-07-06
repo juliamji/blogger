@@ -11,5 +11,12 @@
   <body>
   	<p class="flash"><%= flash.notice %></p>
     <%= yield %>
+    <br>
+    <br>
+  <% if logged_in? %>
+    <%= "Logged in as #{current_user.email}" %>
+  <% else %>
+      Logged Out
+  <% end %>
   </body>
 </html>
