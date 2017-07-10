@@ -10,5 +10,5 @@ Rails.application.routes.draw do
 
   get 'login' => 'author_sessions#new'
   get 'logout' => 'author_sessions#destroy'
-  post 'login' => 'author_sessions#create'
+  post 'author_sessions_path' => 'author_sessions#create'
 end
